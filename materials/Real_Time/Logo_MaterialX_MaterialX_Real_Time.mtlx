@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<materialx version="1.39">
+  <surface name="mtlxsurface1" type="surfaceshader" xpos="13.3061" ypos="-2.36712">
+    <input name="bsdf" type="BSDF" nodename="mtlxmix1" />
+  </surface>
+  <mix name="mtlxmix1" type="BSDF" xpos="5.70822" ypos="-1.91712">
+    <input name="bg" type="BSDF" nodename="mtlxconductor_bsdf1" />
+    <input name="fg" type="BSDF" nodename="mtlxlayer1" />
+    <input name="mix" type="float" nodename="mtlxseparate4c1" output="outa" />
+  </mix>
+  <layer name="mtlxlayer1" type="BSDF" nodedef="ND_layer_bsdf" xpos="1.2808" ypos="-4.64545">
+    <input name="base" type="BSDF" nodename="mtlxoren_nayar_diffuse_bsdf1" />
+    <input name="top" type="BSDF" nodename="mtlxdielectric_bsdf1" />
+  </layer>
+  <dielectric_bsdf name="mtlxdielectric_bsdf1" type="BSDF" xpos="-2.9411" ypos="-8.29882">
+    <input name="ior" type="float" value="1.7" />
+    <input name="normal" type="vector3" nodename="mtlxbump1" />
+    <input name="retroreflective" type="boolean" value="true" />
+    <input name="roughness" type="vector2" nodename="mtlxroughness_anisotropy2" />
+    <input name="thinfilm_ior" type="float" value="1.8" />
+    <input name="thinfilm_thickness" type="float" value="1" />
+  </dielectric_bsdf>
+  <roughness_anisotropy name="mtlxroughness_anisotropy2" type="vector2" xpos="-5.56436" ypos="-8.42097">
+    <input name="anisotropy" type="float" nodename="mtlxseparate3c2" output="outg" />
+    <input name="roughness" type="float" nodename="mtlxseparate3c2" output="outr" />
+  </roughness_anisotropy>
+  <separate3 name="mtlxseparate3c2" type="multioutput" nodedef="ND_separate3_color3" xpos="-8.72074" ypos="-8.16603">
+    <input name="in" type="color3" nodename="mtlxhextiledimage2" />
+  </separate3>
+  <hextiledimage name="mtlxhextiledimage2" type="color3" xpos="-10.9189" ypos="-8.16603">
+    <input name="file" type="filename" value="../../textures/srgb/scratches.png" colorspace="raw" />
+  </hextiledimage>
+  <bump name="mtlxbump1" type="vector3" xpos="-5.56436" ypos="-7.08424">
+    <input name="height" type="float" nodename="mtlxseparate3c2" output="outr" />
+    <input name="scale" type="float" value="-0.05" />
+  </bump>
+  <oren_nayar_diffuse_bsdf name="mtlxoren_nayar_diffuse_bsdf1" type="BSDF" xpos="-2.42188" ypos="-4.39156">
+    <input name="color" type="color3" nodename="mtlximage2" />
+  </oren_nayar_diffuse_bsdf>
+  <image name="mtlximage2" type="color3" xpos="-6.81708" ypos="-4.54156">
+    <input name="file" type="filename" value="../../textures/srgb/materialx-logo.png" colorspace="srgb_texture" />
+  </image>
+  <conductor_bsdf name="mtlxconductor_bsdf1" type="BSDF" xpos="-2.88403" ypos="-1.87239">
+    <input name="extinction" type="color3" value="5.206, 4.231, 3.754" />
+    <input name="ior" type="color3" value="4.369, 2.916, 1.654" />
+    <input name="normal" type="vector3" nodename="mtlxbump2" />
+    <input name="roughness" type="vector2" nodename="mtlxroughness_anisotropy1" />
+  </conductor_bsdf>
+  <roughness_anisotropy name="mtlxroughness_anisotropy1" type="vector2" xpos="-5.79878" ypos="-1.34739">
+    <input name="anisotropy" type="float" nodename="mtlxseparate3c1" output="outg" />
+    <input name="roughness" type="float" nodename="mtlxseparate3c1" output="outr" />
+  </roughness_anisotropy>
+  <separate3 name="mtlxseparate3c1" type="multioutput" nodedef="ND_separate3_color3" xpos="-8.30006" ypos="-1.34739">
+    <input name="in" type="color3" nodename="mtlxclamp1" />
+  </separate3>
+  <clamp name="mtlxclamp1" type="color3" nodedef="ND_clamp_color3" xpos="-10.8199" ypos="-1.34739">
+    <input name="high" type="color3" value="0.2, 0.2, 0.2" />
+    <input name="in" type="color3" nodename="mtlxhextiledimage1" />
+    <input name="low" type="color3" value="0.01, 0.01, 0.01" />
+  </clamp>
+  <hextiledimage name="mtlxhextiledimage1" type="color3" xpos="-13.7293" ypos="-1.34739">
+    <input name="file" type="filename" value="../../textures/srgb/Metal003_4K_Roughness.png" colorspace="raw" />
+    <input name="tiling" type="vector2" value="2, 2" />
+  </hextiledimage>
+  <bump name="mtlxbump2" type="vector3" xpos="-5.79878" ypos="0.520775">
+    <input name="height" type="float" nodename="mtlxseparate3c1" output="outr" />
+    <input name="scale" type="float" value="-0.05" />
+  </bump>
+  <separate4 name="mtlxseparate4c1" type="multioutput" nodedef="ND_separate4_color4" xpos="1.2" ypos="0.105344">
+    <input name="in" type="color4" nodename="mtlximage1" />
+  </separate4>
+  <image name="mtlximage1" type="color4" xpos="-0.291781" ypos="0.105344">
+    <input name="file" type="filename" value="../../textures/srgb/materialx-logo.png" colorspace="srgb_texture" />
+  </image>
+  <surfacematerial name="Logo_MaterialX_MaterialX" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxsurface1" />
+  </surfacematerial>
+</materialx>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<materialx version="1.39">
+  <surface name="mtlxsurface1" type="surfaceshader" xpos="3.39805" ypos="0.22329">
+    <input name="bsdf" type="BSDF" nodename="mtlxconductor_bsdf1" />
+    <input name="thin_walled" type="boolean" value="true" />
+  </surface>
+  <conductor_bsdf name="mtlxconductor_bsdf1" type="BSDF" xpos="0.132234" ypos="0.22329">
+    <input name="extinction" type="color3" value="4, 3.5, 3" />
+    <input name="ior" type="color3" value="4, 3.5, 3" />
+    <input name="normal" type="vector3" nodename="mtlxbump1" />
+    <input name="roughness" type="vector2" nodename="mtlxremap1" />
+  </conductor_bsdf>
+  <remap name="mtlxremap1" type="vector2" nodedef="ND_remap_vector2" xpos="-2.71704" ypos="-1.83041">
+    <input name="in" type="vector2" nodename="mtlxroughness_anisotropy1" />
+    <input name="outhigh" type="vector2" value="0.2, 0.2" />
+    <input name="outlow" type="vector2" value="0.02, 0.02" />
+  </remap>
+  <roughness_anisotropy name="mtlxroughness_anisotropy1" type="vector2" xpos="-5.50985" ypos="-2.08509">
+    <input name="anisotropy" type="float" nodename="mtlximage2" />
+    <input name="roughness" type="float" nodename="mtlximage2" />
+  </roughness_anisotropy>
+  <image name="mtlximage2" type="float" xpos="-10.4289" ypos="-2.20541">
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/brushedMetalCircular_01.tex" colorspace="raw" />
+  </image>
+  <bump name="mtlxbump1" type="vector3" xpos="-5.08118" ypos="1.36459">
+    <input name="height" type="float" nodename="mtlximage1" />
+    <input name="scale" type="float" value="0.01" />
+  </bump>
+  <image name="mtlximage1" type="float" xpos="-7.97558" ypos="1.36459">
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/brushedMetalCircular_01.tex" colorspace="raw" />
+  </image>
+  <surfacematerial name="Brake_Rotor_MaterialX" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxsurface1" />
+  </surfacematerial>
+</materialx>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<materialx version="1.39">
+  <surface name="mtlxsurface1" type="surfaceshader" xpos="-0.522869" ypos="-0.934659">
+    <input name="bsdf" type="BSDF" nodename="mtlxoren_nayar_diffuse_bsdf1" />
+    <input name="thin_walled" type="boolean" value="true" />
+  </surface>
+  <oren_nayar_diffuse_bsdf name="mtlxoren_nayar_diffuse_bsdf1" type="BSDF" xpos="-2.96876" ypos="-0.921718">
+    <input name="color" type="color3" value="0.0737, 0.7366, 0.1005" />
+  </oren_nayar_diffuse_bsdf>
+  <surfacematerial name="Cornell_Box_Green" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxsurface1" />
+  </surfacematerial>
+</materialx>

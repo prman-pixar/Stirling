@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<materialx version="1.39">
+  <surface name="mtlxsurface1" type="surfaceshader" xpos="8.83288" ypos="0.906063">
+    <input name="bsdf" type="BSDF" nodename="mtlxlayer1" />
+  </surface>
+  <layer name="mtlxlayer1" type="BSDF" nodedef="ND_layer_bsdf" xpos="6.33121" ypos="0.906063">
+    <input name="base" type="BSDF" nodename="mtlxoren_nayar_diffuse_bsdf1" />
+    <input name="top" type="BSDF" nodename="mtlxsheen_bsdf1" />
+  </layer>
+  <sheen_bsdf name="mtlxsheen_bsdf1" type="BSDF" xpos="2.62617" ypos="-0.0927874">
+    <input name="color" type="color3" value="0.3, 0.3, 0.3" />
+    <input name="mode" type="string" value="zeltner" />
+    <input name="normal" type="vector3" nodename="mtlxnormalmap1" />
+    <input name="roughness" type="float" nodename="mtlxrange1" />
+  </sheen_bsdf>
+  <range name="mtlxrange1" type="float" xpos="-0.37383" ypos="-0.673676">
+    <input name="in" type="float" nodename="mtlxtiledimage5" />
+    <input name="outhigh" type="float" value="0.8" />
+    <input name="outlow" type="float" value="0.3" />
+  </range>
+  <tiledimage name="mtlxtiledimage5" type="float" xpos="-3.37383" ypos="-2.08415">
+    <input name="file" type="filename" value="../../textures/srgb/poly_wool_herringbone_rough_1k.png" colorspace="raw" />
+    <input name="uvtiling" type="vector2" value="5, 5" />
+  </tiledimage>
+  <normalmap name="mtlxnormalmap1" type="vector3" nodedef="ND_normalmap_float" xpos="-2.72513" ypos="4.95675">
+    <input name="in" type="vector3" nodename="mtlxtiledimage1" />
+  </normalmap>
+  <tiledimage name="mtlxtiledimage1" type="vector3" xpos="-5.58734" ypos="4.95675">
+    <input name="file" type="filename" value="../../textures/srgb/poly_wool_herringbone_nor_gl_1k.png" colorspace="raw" />
+    <input name="uvtiling" type="vector2" value="5, 5" />
+  </tiledimage>
+  <oren_nayar_diffuse_bsdf name="mtlxoren_nayar_diffuse_bsdf1" type="BSDF" xpos="2.62617" ypos="2.23569">
+    <input name="color" type="color3" nodename="mtlxcolorcorrect1" />
+    <input name="normal" type="vector3" nodename="mtlxnormalmap1" />
+  </oren_nayar_diffuse_bsdf>
+  <colorcorrect name="mtlxcolorcorrect1" type="color3" xpos="-2.72513" ypos="1.63569">
+    <input name="gain" type="float" value="0.1" />
+    <input name="in" type="color3" nodename="mtlxtiledimage2" />
+    <input name="saturation" type="float" value="0" />
+  </colorcorrect>
+  <tiledimage name="mtlxtiledimage2" type="color3" xpos="-5.38103" ypos="1.48569">
+    <input name="file" type="filename" value="../../textures/srgb/poly_wool_herringbone_diff_1k.png" colorspace="srgb_texture" />
+    <input name="uvtiling" type="vector2" value="5, 5" />
+  </tiledimage>
+  <surfacematerial name="Interior_Cloth_Dark_MaterialX" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxsurface1" />
+  </surfacematerial>
+</materialx>

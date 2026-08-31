@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<materialx version="1.39">
+  <surface name="mtlxsurface1" type="surfaceshader" xpos="-0.150917" ypos="-1.42602">
+    <input name="bsdf" type="BSDF" nodename="mtlxlayer1" />
+  </surface>
+  <layer name="mtlxlayer1" type="BSDF" nodedef="ND_layer_bsdf" xpos="-2.32137" ypos="-1.35102">
+    <input name="base" type="BSDF" nodename="mtlxoren_nayar_diffuse_bsdf1" />
+    <input name="top" type="BSDF" nodename="mtlxdielectric_bsdf1" />
+  </layer>
+  <dielectric_bsdf name="mtlxdielectric_bsdf1" type="BSDF" xpos="-5.3688" ypos="-3.11385">
+    <input name="roughness" type="vector2" value="0.2, 0.2" />
+  </dielectric_bsdf>
+  <oren_nayar_diffuse_bsdf name="mtlxoren_nayar_diffuse_bsdf1" type="BSDF" xpos="-5.17457" ypos="-0.183898">
+    <input name="color" type="color3" value="0.6423, 0.0262, 0.0155" />
+  </oren_nayar_diffuse_bsdf>
+  <surfacematerial name="Brake_Pad_MaterialX" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxsurface1" />
+  </surfacematerial>
+</materialx>

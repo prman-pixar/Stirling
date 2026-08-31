@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<materialx version="1.39">
+  <surface name="mtlxsurface1" type="surfaceshader" xpos="0.111249" ypos="-0.145247">
+    <input name="bsdf" type="BSDF" nodename="mtlxlayer1" />
+  </surface>
+  <layer name="mtlxlayer1" type="BSDF" nodedef="ND_layer_bsdf" xpos="-2.52228" ypos="-0.386424">
+    <input name="base" type="BSDF" nodename="mtlxoren_nayar_diffuse_bsdf1" />
+    <input name="top" type="BSDF" nodename="mtlxdielectric_bsdf1" />
+  </layer>
+  <dielectric_bsdf name="mtlxdielectric_bsdf1" type="BSDF" xpos="-4.88405" ypos="-1.13701">
+    <input name="roughness" type="vector2" value="0.3, 0.3" />
+  </dielectric_bsdf>
+  <oren_nayar_diffuse_bsdf name="mtlxoren_nayar_diffuse_bsdf1" type="BSDF" xpos="-4.88405" ypos="1.49828">
+    <input name="color" type="color3" value="0.05, 0.05, 0.05" />
+  </oren_nayar_diffuse_bsdf>
+  <surfacematerial name="Black_Plastic_MaterialX" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxsurface1" />
+  </surfacematerial>
+</materialx>

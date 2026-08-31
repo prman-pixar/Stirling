@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<materialx version="1.39">
+  <surface name="mtlxsurface1" type="surfaceshader" xpos="-0.231694" ypos="-0.295835">
+    <input name="bsdf" type="BSDF" nodename="mtlxconductor_bsdf1" />
+  </surface>
+  <conductor_bsdf name="mtlxconductor_bsdf1" type="BSDF" xpos="-4.76111" ypos="-0.175247">
+    <input name="extinction" type="color3" value="5.37, 4.605, 3.927" />
+    <input name="ior" type="color3" value="0.781, 0.781, 0.781" />
+    <input name="roughness" type="vector2" value="0.001, 0.001" />
+  </conductor_bsdf>
+  <surfacematerial name="Mirror_MaterialX" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxsurface1" />
+  </surfacematerial>
+</materialx>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<materialx version="1.39">
+  <surface name="mtlxsurface1" type="surfaceshader" xpos="1.81452" ypos="2.2279">
+    <input name="edf" type="EDF" nodename="mtlxuniform_edf1" />
+  </surface>
+  <uniform_edf name="mtlxuniform_edf1" type="EDF" xpos="-0.763877" ypos="2.4529">
+    <input name="color" type="color3" value="0.8, 0.8, 0.8" />
+  </uniform_edf>
+  <surfacematerial name="White_Emissive_MaterialX" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxsurface1" />
+  </surfacematerial>
+</materialx>

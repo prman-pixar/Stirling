@@ -1,0 +1,27 @@
+﻿<?xml version="1.0"?>
+<materialx version="1.39">
+  <surface name="mtlxsurface1" type="surfaceshader" xpos="4.67306" ypos="-3.14002">
+    <input name="edf" type="EDF" nodename="mtlxuniform_edf1" />
+  </surface>
+  <uniform_edf name="mtlxuniform_edf1" type="EDF" xpos="0.0656693" ypos="-2.69002">
+    <input name="color" type="color3" nodename="mtlxmix1" />
+  </uniform_edf>
+  <mix name="mtlxmix1" type="color3" nodedef="ND_mix_color3" xpos="-2.49266" ypos="-2.69002">
+    <input name="bg" type="color3" nodename="mtlxcombine3" />
+    <input name="mix" type="float" nodename="mtlxseparate4c1" output="outa" />
+  </mix>
+  <combine3 name="mtlxcombine3" type="color3" xpos="-5.3971" ypos="-2.69002">
+    <input name="in1" type="float" nodename="mtlxseparate4c1" output="outr" />
+    <input name="in2" type="float" nodename="mtlxseparate4c1" output="outg" />
+    <input name="in3" type="float" nodename="mtlxseparate4c1" output="outb" />
+  </combine3>
+  <separate4 name="mtlxseparate4c1" type="multioutput" nodedef="ND_separate4_color4" xpos="-7.81319" ypos="-2.84002">
+    <input name="in" type="color4" nodename="mtlximage4" />
+  </separate4>
+  <image name="mtlximage4" type="color4" xpos="-9.91664" ypos="-2.99661">
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/materialx-logo-black.tex" colorspace="srgb_texture" />
+  </image>
+  <surfacematerial name="MaterialX_Logo_Emissive" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxsurface1" />
+  </surfacematerial>
+</materialx>

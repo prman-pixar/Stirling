@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<materialx version="1.39">
+  <surface name="mtlxsurface1" type="surfaceshader" xpos="0.173997" ypos="-1.00924">
+    <input name="bsdf" type="BSDF" nodename="mtlxdielectric_bsdf1" />
+  </surface>
+  <dielectric_bsdf name="mtlxdielectric_bsdf1" type="BSDF" xpos="-2.2764" ypos="-1.00924">
+    <input name="normal" type="vector3" nodename="mtlxnormalmap1" />
+    <input name="roughness" type="vector2" nodename="mtlxroughness_anisotropy2" />
+    <input name="scatter_mode" type="string" value="RT" />
+  </dielectric_bsdf>
+  <roughness_anisotropy name="mtlxroughness_anisotropy2" type="vector2" xpos="-10.2291" ypos="-4.32713">
+    <input name="anisotropy" type="float" nodename="mtlxseparate3c2" output="outr" />
+    <input name="roughness" type="float" nodename="mtlxseparate3c2" output="outr" />
+  </roughness_anisotropy>
+  <separate3 name="mtlxseparate3c2" type="multioutput" nodedef="ND_separate3_color3" xpos="-13.3854" ypos="-4.07219">
+    <input name="in" type="color3" nodename="mtlxhextiledimage2" />
+  </separate3>
+  <hextiledimage name="mtlxhextiledimage2" type="color3" xpos="-15.5836" ypos="-4.07219">
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/scratches.tex" colorspace="raw" />
+    <input name="tiling" type="vector2" value="2, 2" />
+  </hextiledimage>
+  <normalmap name="mtlxnormalmap1" type="vector3" nodedef="ND_normalmap_float" xpos="-5.56346" ypos="-0.374747">
+    <input name="in" type="vector3" nodename="mtlximage1" />
+    <input name="normal" type="vector3" nodename="mtlxbump1" />
+  </normalmap>
+  <image name="mtlximage1" type="vector3" xpos="-8.00934" ypos="-0.439453">
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/reflector_Glass.tex" colorspace="raw" />
+    <input name="texcoord" type="vector2" nodename="mtlxplace2d1" />
+  </image>
+  <place2d name="mtlxplace2d1" type="vector2" xpos="-10.3517" ypos="-0.439453">
+    <input name="rotate" type="float" value="9e+01" />
+    <input name="texcoord" type="vector2" nodename="mtlxtexcoord1" />
+  </place2d>
+  <texcoord name="mtlxtexcoord1" type="vector2" xpos="-13.436" ypos="-0.844943" />
+  <bump name="mtlxbump1" type="vector3" xpos="-10.2291" ypos="-2.9904">
+    <input name="height" type="float" nodename="mtlxseparate3c2" output="outr" />
+    <input name="scale" type="float" value="-0.05" />
+  </bump>
+  <surfacematerial name="Glass_Reflector_Clear_MaterialX" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxsurface1" />
+  </surfacematerial>
+</materialx>

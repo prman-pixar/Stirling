@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<materialx version="1.39">
+  <surface name="mtlxsurface1" type="surfaceshader" xpos="23.2408" ypos="-0.232691">
+    <input name="bsdf" type="BSDF" nodename="mtlxmix1" />
+  </surface>
+  <mix name="mtlxmix1" type="BSDF" xpos="18.453" ypos="-0.232691">
+    <input name="bg" type="BSDF" nodename="mtlxlayer1" />
+    <input name="fg" type="BSDF" nodename="mtlxlayer2" />
+    <input name="mix" type="float" nodename="mtlxadd1" />
+  </mix>
+  <layer name="mtlxlayer2" type="BSDF" nodedef="ND_layer_bsdf" xpos="14.2727" ypos="-2.65457">
+    <input name="base" type="BSDF" nodename="mtlxoren_nayar_diffuse_bsdf2" />
+    <input name="top" type="BSDF" nodename="mtlxdielectric_bsdf2" />
+  </layer>
+  <dielectric_bsdf name="mtlxdielectric_bsdf2" type="BSDF" xpos="8.90877" ypos="-6.14309">
+    <input name="normal" type="vector3" nodename="mtlxbump3" />
+    <input name="roughness" type="vector2" value="0.2, 0.2" />
+  </dielectric_bsdf>
+  <bump name="mtlxbump3" type="vector3" xpos="4.8903" ypos="-3.10457">
+    <input name="height" type="float" nodename="mtlxseparate3c4" output="outr" />
+  </bump>
+  <separate3 name="mtlxseparate3c4" type="multioutput" nodedef="ND_separate3_color3" xpos="2.42246" ypos="-3.12431">
+    <input name="in" type="color3" nodename="mtlxhextiledimage2" />
+  </separate3>
+  <hextiledimage name="mtlxhextiledimage2" type="color3" xpos="0.018019" ypos="-6.14309">
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/coast_sand_05_diff_1k.tex" colorspace="srgb_texture" />
+    <input name="tiling" type="vector2" value="8, 8" />
+  </hextiledimage>
+  <oren_nayar_diffuse_bsdf name="mtlxoren_nayar_diffuse_bsdf2" type="BSDF" xpos="9.02118" ypos="-2.87957">
+    <input name="color" type="color3" nodename="mtlxcolorcorrect1" />
+    <input name="normal" type="vector3" nodename="mtlxbump3" />
+  </oren_nayar_diffuse_bsdf>
+  <colorcorrect name="mtlxcolorcorrect1" type="color3" xpos="2.83522" ypos="-6.14309">
+    <input name="gain" type="float" value="2" />
+    <input name="in" type="color3" nodename="mtlxhextiledimage2" />
+  </colorcorrect>
+  <layer name="mtlxlayer1" type="BSDF" nodedef="ND_layer_bsdf" xpos="1.18789" ypos="0.0673093">
+    <input name="base" type="BSDF" nodename="mtlxoren_nayar_diffuse_bsdf1" />
+    <input name="top" type="BSDF" nodename="mtlxdielectric_bsdf1" />
+  </layer>
+  <dielectric_bsdf name="mtlxdielectric_bsdf1" type="BSDF" xpos="-1.76488" ypos="-1.43269">
+    <input name="normal" type="vector3" nodename="mtlxbump1" />
+    <input name="roughness" type="vector2" value="0.2, 0.2" />
+  </dielectric_bsdf>
+  <bump name="mtlxbump1" type="vector3" xpos="-5.3418" ypos="0.289025">
+    <input name="height" type="float" nodename="mtlxseparate3c2" output="outr" />
+    <input name="normal" type="vector3" nodename="mtlxbump2" />
+    <input name="scale" type="float" value="0.1" />
+  </bump>
+  <separate3 name="mtlxseparate3c2" type="multioutput" nodedef="ND_separate3_color3" xpos="-8.90509" ypos="-0.690975">
+    <input name="in" type="color3" nodename="mtlximage2" />
+  </separate3>
+  <image name="mtlximage2" type="color3" xpos="-11.4286" ypos="-0.690975">
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/tire_bump.tex" colorspace="raw" />
+  </image>
+  <bump name="mtlxbump2" type="vector3" xpos="-8.90509" ypos="1.99923">
+    <input name="height" type="float" nodename="mtlxseparate3c3" output="outr" />
+    <input name="scale" type="float" value="0.2" />
+  </bump>
+  <separate3 name="mtlxseparate3c3" type="multioutput" nodedef="ND_separate3_color3" xpos="-11.4286" ypos="1.99923">
+    <input name="in" type="color3" nodename="mtlximage3" />
+  </separate3>
+  <image name="mtlximage3" type="color3" xpos="-14.4926" ypos="1.99923">
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/RenderMan_Tire_Inscription_Bump.tex" />
+    <input name="filtertype" type="string" value="cubic" />
+    <input name="texcoord" type="vector2" nodename="mtlxplace2d1" />
+  </image>
+  <place2d name="mtlxplace2d1" type="vector2" xpos="-17.8397" ypos="2.46407">
+    <input name="scale" type="vector2" value="1, -1" />
+    <input name="texcoord" type="vector2" nodename="mtlxtexcoord1" />
+  </place2d>
+  <texcoord name="mtlxtexcoord1" type="vector2" xpos="-20.4573" ypos="2.46407" />
+  <oren_nayar_diffuse_bsdf name="mtlxoren_nayar_diffuse_bsdf1" type="BSDF" xpos="-1.76488" ypos="1.19731">
+    <input name="color" type="color3" value="0.02, 0.02, 0.02" />
+    <input name="normal" type="vector3" nodename="mtlxbump1" />
+    <input name="roughness" type="float" value="0.2" />
+  </oren_nayar_diffuse_bsdf>
+  <add name="mtlxadd1" type="float" xpos="10.8426" ypos="-11.9333">
+    <input name="in1" type="float" nodename="mtlxfractal3d2" />
+    <input name="in2" type="float" nodename="mtlxrange1" />
+  </add>
+  <fractal3d name="mtlxfractal3d2" type="float" xpos="8.85241" ypos="-13.6742">
+    <input name="amplitude" type="float" value="0.25" />
+    <input name="diminish" type="float" value="0.1" />
+    <input name="lacunarity" type="float" value="1.5" />
+    <input name="position" type="vector3" nodename="mtlxposition3" />
+  </fractal3d>
+  <position name="mtlxposition3" type="vector3" xpos="6.72703" ypos="-13.0742" />
+  <range name="mtlxrange1" type="float" xpos="4.8903" ypos="-12.3083">
+    <input name="gamma" type="float" value="2" />
+    <input name="in" type="float" nodename="mtlximage4" />
+  </range>
+  <image name="mtlximage4" type="float" xpos="2.18262" ypos="-12.3083">
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/Stirling_Tire_Mask.tex" colorspace="raw" />
+  </image>
+  <displacement name="mtlxdisplacement" type="displacementshader" nodedef="ND_displacement_float" xpos="-0.120633" ypos="4.63403">
+    <input name="displacement" type="float" nodename="mtlxseparate3c1" output="outr" />
+  </displacement>
+  <separate3 name="mtlxseparate3c1" type="multioutput" nodedef="ND_separate3_color3" xpos="-2.54873" ypos="4.63403">
+    <input name="in" type="color3" nodename="mtlximage1" />
+  </separate3>
+  <image name="mtlximage1" type="color3" xpos="-4.60638" ypos="4.63403">
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/tire_Disp.tex" colorspace="raw" />
+  </image>
+  <surfacematerial name="Tires_Rubber_MaterialX" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxsurface1" />
+    <input name="displacementshader" type="displacementshader" nodename="mtlxdisplacement" />
+  </surfacematerial>
+</materialx>

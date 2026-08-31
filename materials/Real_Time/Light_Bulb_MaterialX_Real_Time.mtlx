@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<materialx version="1.39">
+  <surface name="mtlxsurface1" type="surfaceshader" xpos="-2.1157" ypos="-1.43528">
+    <input name="bsdf" type="BSDF" nodename="mtlxoren_nayar_diffuse_bsdf1" />
+  </surface>
+  <oren_nayar_diffuse_bsdf name="mtlxoren_nayar_diffuse_bsdf1" type="BSDF" xpos="-4.80381" ypos="-1.73902">
+    <input name="color" type="color3" nodename="mtlxblackbody1" />
+  </oren_nayar_diffuse_bsdf>
+  <blackbody name="mtlxblackbody1" type="color3" xpos="-8.80138" ypos="-1.73902">
+    <input name="temperature" type="float" value="3.5e+03" />
+  </blackbody>
+  <surfacematerial name="Light_Bulb_MaterialX" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxsurface1" />
+  </surfacematerial>
+</materialx>

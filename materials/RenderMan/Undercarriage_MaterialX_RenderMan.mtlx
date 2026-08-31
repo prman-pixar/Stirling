@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<materialx version="1.39">
+  <surface name="mtlxsurface1" type="surfaceshader" xpos="6.71743" ypos="-0.2626">
+    <input name="bsdf" type="BSDF" nodename="mtlxmix1" />
+  </surface>
+  <mix name="mtlxmix1" type="BSDF" xpos="2.979" ypos="-0.2626">
+    <input name="bg" type="BSDF" nodename="mtlxoren_nayar_diffuse_bsdf1" />
+    <input name="fg" type="BSDF" nodename="mtlxlayer2" />
+    <input name="mix" type="float" nodename="mtlxinvert1" />
+  </mix>
+  <layer name="mtlxlayer2" type="BSDF" nodedef="ND_layer_bsdf" xpos="-1.32189" ypos="-11.1033">
+    <input name="base" type="BSDF" nodename="mtlxoren_nayar_diffuse_bsdf2" />
+    <input name="top" type="BSDF" nodename="mtlxdielectric_bsdf2" />
+  </layer>
+  <dielectric_bsdf name="mtlxdielectric_bsdf2" type="BSDF" xpos="-4.64293" ypos="-13.6115">
+    <input name="normal" type="vector3" nodename="mtlxbump2" />
+    <input name="roughness" type="vector2" value="0.2, 0.2" />
+  </dielectric_bsdf>
+  <bump name="mtlxbump2" type="vector3" xpos="-7.70442" ypos="-10.7972">
+    <input name="height" type="float" nodename="mtlxseparate3c3" output="outr" />
+  </bump>
+  <separate3 name="mtlxseparate3c3" type="multioutput" nodedef="ND_separate3_color3" xpos="-10.2403" ypos="-11.5442">
+    <input name="in" type="color3" nodename="mtlxhextiledimage3" />
+  </separate3>
+  <hextiledimage name="mtlxhextiledimage3" type="color3" xpos="-12.7857" ypos="-14.1362">
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/coast_sand_05_diff_1k.tex" colorspace="srgb_texture" />
+    <input name="tiling" type="vector2" value="15, 15" />
+  </hextiledimage>
+  <oren_nayar_diffuse_bsdf name="mtlxoren_nayar_diffuse_bsdf2" type="BSDF" xpos="-4.64293" ypos="-10.2733">
+    <input name="color" type="color3" nodename="mtlxcolorcorrect1" />
+    <input name="normal" type="vector3" nodename="mtlxbump2" />
+  </oren_nayar_diffuse_bsdf>
+  <colorcorrect name="mtlxcolorcorrect1" type="color3" xpos="-7.82572" ypos="-14.1362">
+    <input name="gain" type="float" value="2" />
+    <input name="in" type="color3" nodename="mtlxhextiledimage3" />
+  </colorcorrect>
+  <oren_nayar_diffuse_bsdf name="mtlxoren_nayar_diffuse_bsdf1" type="BSDF" xpos="-6.50448" ypos="-0.3376">
+    <input name="color" type="color3" value="0.07, 0.07, 0.07" />
+  </oren_nayar_diffuse_bsdf>
+  <invert name="mtlxinvert1" type="float" xpos="-9.20812" ypos="-7.24307">
+    <input name="in" type="float" nodename="mtlxsmoothstep1" />
+  </invert>
+  <smoothstep name="mtlxsmoothstep1" type="float" xpos="-11.3855" ypos="-7.39307">
+    <input name="in" type="float" nodename="mtlxcontrast1" />
+    <input name="low" type="float" value="0.3" />
+  </smoothstep>
+  <contrast name="mtlxcontrast1" type="float" xpos="-13.8524" ypos="-7.39307">
+    <input name="amount" type="float" value="2" />
+    <input name="in" type="float" nodename="mtlxremap1" />
+  </contrast>
+  <remap name="mtlxremap1" type="float" xpos="-16.1868" ypos="-7.39307">
+    <input name="in" type="float" nodename="mtlxextract1" />
+    <input name="inhigh" type="float" value="1e+02" />
+  </remap>
+  <extract name="mtlxextract1" type="float" nodedef="ND_extract_vector3" xpos="-18.8936" ypos="-7.39307">
+    <input name="in" type="vector3" nodename="mtlxposition1" />
+    <input name="index" type="integer" value="1" />
+  </extract>
+  <position name="mtlxposition1" type="vector3" xpos="-21.5726" ypos="-7.39307">
+    <input name="space" type="string" value="world" />
+  </position>
+  <surfacematerial name="Undercarriage_MaterialX" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxsurface1" />
+  </surfacematerial>
+</materialx>

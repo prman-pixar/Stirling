@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<materialx version="1.39">
+  <surface name="mtlxsurface1" type="surfaceshader" xpos="-0.785575" ypos="-0.0376">
+    <input name="bsdf" type="BSDF" nodename="mtlxmix1" />
+  </surface>
+  <mix name="mtlxmix1" type="BSDF" xpos="-3.13672" ypos="0.1124">
+    <input name="bg" type="BSDF" nodename="mtlxdielectric_bsdf1" />
+  </mix>
+  <dielectric_bsdf name="mtlxdielectric_bsdf1" type="BSDF" xpos="-5.75827" ypos="0.295266">
+    <input name="normal" type="vector3" nodename="mtlxbump1" />
+    <input name="roughness" type="vector2" value="0, 0" />
+    <input name="scatter_mode" type="string" value="RT" />
+    <input name="tint" type="color3" value="0.98, 0.99, 1" />
+  </dielectric_bsdf>
+  <bump name="mtlxbump1" type="vector3" xpos="-8.71349" ypos="1.19527">
+    <input name="height" type="float" nodename="mtlxseparate3c2" output="outr" />
+    <input name="scale" type="float" value="-0.003" />
+  </bump>
+  <separate3 name="mtlxseparate3c2" type="multioutput" nodedef="ND_separate3_color3" xpos="-11.632" ypos="1.34527">
+    <input name="in" type="color3" nodename="mtlxhextiledimage2" />
+  </separate3>
+  <hextiledimage name="mtlxhextiledimage2" type="color3" xpos="-13.8302" ypos="1.34527">
+    <input name="file" type="filename" value="../../textures/srgb/scratches.png" colorspace="raw" />
+    <input name="tiling" type="vector2" value="1e+01, 1e+01" />
+  </hextiledimage>
+  <surfacematerial name="Window_MaterialX" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxsurface1" />
+  </surfacematerial>
+</materialx>
