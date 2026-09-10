@@ -9,7 +9,7 @@ Stirling comes in two openUSD variants:
 - RenderMan: TEX mipmapped format. Textures use a OpenColorIO Aces color space with a maximum resolution of 4K. Typical in feature animation and visual effects.
 
 Stirling running in Houdini 22 and RenderMan 28:
-<img width="2559" height="1537" alt="Stirling_MaterialX_Houdini22_RenderMan28" src="https://github.com/user-attachments/assets/90ea62f8-5676-4c7d-850c-6e1db61e4401" />
+<img width="2556" height="1378" alt="Houdini-22-RenderMan-XPU" src="https://github.com/user-attachments/assets/8ae3e9aa-a518-46ee-90f4-1b342c28d532" />
 
 Stirling also has some fun RenderMan historical trivia:
 
