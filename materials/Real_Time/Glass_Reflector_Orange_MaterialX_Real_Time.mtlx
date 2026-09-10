@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<materialx version="1.39">
+<materialx version="1.39" colorspace="lin_srgb">
   <surface name="mtlxsurface1" type="surfaceshader" xpos="-0.154047" ypos="-0.141806">
     <input name="bsdf" type="BSDF" nodename="mtlxdielectric_bsdf1" />
   </surface>
@@ -13,7 +13,7 @@
     <input name="in" type="vector3" nodename="mtlximage1" />
   </normalmap>
   <image name="mtlximage1" type="vector3" xpos="-8.00934" ypos="-0.439453">
-    <input name="file" type="filename" value="../../textures/srgb/reflector_Glass.png" colorspace="raw" />
+    <input name="file" type="filename" value="../../textures/srgb/reflector_Glass.png" colorspace="none" />
     <input name="texcoord" type="vector2" nodename="mtlxplace2d1" />
   </image>
   <place2d name="mtlxplace2d1" type="vector2" xpos="-10.3517" ypos="-0.439453">

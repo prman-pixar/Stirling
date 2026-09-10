@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<materialx version="1.39">
+<materialx version="1.39" colorspace="acescg">
   <surface name="mtlxsurface1" type="surfaceshader" xpos="15.2136" ypos="-2.71301">
     <input name="bsdf" type="BSDF" nodename="mtlxmix1" />
   </surface>
@@ -23,7 +23,7 @@
     <input name="in" type="color3" nodename="mtlxhextiledimage3" />
   </separate3>
   <hextiledimage name="mtlxhextiledimage3" type="color3" xpos="-4.22225" ypos="-14.2542">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/coast_sand_05_diff_1k.tex" colorspace="srgb_texture" />
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/coast_sand_05_diff_1k.tex" colorspace="acescg" />
     <input name="tiling" type="vector2" value="15, 15" />
   </hextiledimage>
   <oren_nayar_diffuse_bsdf name="mtlxoren_nayar_diffuse_bsdf2" type="BSDF" xpos="3.92055" ypos="-10.3913">
@@ -51,7 +51,7 @@
     <input name="in" type="color3" nodename="mtlxhextiledimage2" />
   </separate3>
   <hextiledimage name="mtlxhextiledimage2" type="color3" xpos="-13.6181" ypos="-4.81293">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/scratches.tex" colorspace="raw" />
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/scratches.tex" colorspace="none" />
     <input name="tiling" type="vector2" value="5, 5" />
   </hextiledimage>
   <bump name="mtlxbump1" type="vector3" xpos="-8.26352" ypos="-3.73114">
@@ -76,7 +76,7 @@
     <input name="low" type="color3" value="0.01, 0.01, 0.01" />
   </clamp>
   <hextiledimage name="mtlxhextiledimage1" type="color3" xpos="-13.7293" ypos="-1.34739">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/Metal003_4K_Roughness.tex" colorspace="raw" />
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/Metal003_4K_Roughness.tex" colorspace="none" />
     <input name="tiling" type="vector2" value="5, 5" />
   </hextiledimage>
   <outside name="mtlxoutside1" type="float" xpos="-4.11469" ypos="-7.3508">

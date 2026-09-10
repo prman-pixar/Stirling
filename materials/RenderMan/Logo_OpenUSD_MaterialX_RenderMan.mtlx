@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0"?>
-<materialx version="1.39">
+<materialx version="1.39" colorspace="acescg">
   <surface name="mtlxsurface1" type="surfaceshader" xpos="13.3061" ypos="-2.36712">
     <input name="bsdf" type="BSDF" nodename="mtlxmix1" />
   </surface>
@@ -28,7 +28,7 @@
     <input name="in" type="color3" nodename="mtlxhextiledimage2" />
   </separate3>
   <hextiledimage name="mtlxhextiledimage2" type="color3" xpos="-10.9189" ypos="-8.16603">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/scratches.tex" colorspace="raw" />
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/scratches.tex" colorspace="none" />
   </hextiledimage>
   <bump name="mtlxbump1" type="vector3" xpos="-5.56436" ypos="-7.08424">
     <input name="height" type="float" nodename="mtlxseparate3c2" output="outr" />
@@ -38,7 +38,7 @@
     <input name="color" type="color3" nodename="mtlximage2" />
   </oren_nayar_diffuse_bsdf>
   <image name="mtlximage2" type="color3" xpos="-6.81708" ypos="-4.54156">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/openusd-logo.tex" colorspace="srgb_texture" />
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/openusd-logo.tex" colorspace="acescg" />
     <input name="texcoord" type="vector2" nodename="mtlxplace2d1" />
   </image>
   <place2d name="mtlxplace2d1" type="vector2" xpos="-9.40866" ypos="-4.38045">
@@ -66,7 +66,7 @@
     <input name="low" type="color3" value="0.01, 0.01, 0.01" />
   </clamp>
   <hextiledimage name="mtlxhextiledimage1" type="color3" xpos="-13.7293" ypos="-1.34739">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/Metal003_4K_Roughness.tex" colorspace="raw" />
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/Metal003_4K_Roughness.tex" colorspace="none" />
     <input name="tiling" type="vector2" value="2, 2" />
   </hextiledimage>
   <bump name="mtlxbump2" type="vector3" xpos="-5.79878" ypos="0.520775">
@@ -77,7 +77,7 @@
     <input name="in" type="color4" nodename="mtlximage1" />
   </separate4>
   <image name="mtlximage1" type="color4" xpos="-0.291781" ypos="0.105344">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/openusd-logo.tex" colorspace="srgb_texture" />
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/openusd-logo.tex" colorspace="acescg" />
     <input name="texcoord" type="vector2" nodename="mtlxplace2d1" />
   </image>
   <surfacematerial name="Logo_OpenUSD_MaterialX" type="material">

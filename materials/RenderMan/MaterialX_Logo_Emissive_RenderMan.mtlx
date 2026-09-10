@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0"?>
-<materialx version="1.39">
+<materialx version="1.39" colorspace="acescg">
   <surface name="mtlxsurface1" type="surfaceshader" xpos="4.67306" ypos="-3.14002">
     <input name="edf" type="EDF" nodename="mtlxuniform_edf1" />
   </surface>
@@ -19,7 +19,7 @@
     <input name="in" type="color4" nodename="mtlximage4" />
   </separate4>
   <image name="mtlximage4" type="color4" xpos="-9.91664" ypos="-2.99661">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/materialx-logo-black.tex" colorspace="srgb_texture" />
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/materialx-logo-black.tex" colorspace="acescg" />
   </image>
   <surfacematerial name="MaterialX_Logo_Emissive" type="material">
     <input name="surfaceshader" type="surfaceshader" nodename="mtlxsurface1" />

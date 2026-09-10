@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<materialx version="1.39">
+<materialx version="1.39" colorspace="acescg">
   <surface name="mtlxsurface1" type="surfaceshader" xpos="32.6061" ypos="0.0342705">
     <input name="bsdf" type="BSDF" nodename="mtlxmix3" />
   </surface>
@@ -23,7 +23,7 @@
     <input name="in" type="color3" nodename="mtlxhextiledimage2" />
   </separate3>
   <hextiledimage name="mtlxhextiledimage2" type="color3" xpos="10.4473" ypos="-9.50214">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/coast_sand_05_diff_1k.tex" colorspace="lin_rec709" />
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/coast_sand_05_diff_1k.tex" colorspace="acescg" />
     <input name="tiling" type="vector2" value="15, 15" />
   </hextiledimage>
   <oren_nayar_diffuse_bsdf name="mtlxoren_nayar_diffuse_bsdf2" type="BSDF" xpos="18.7112" ypos="-5.61961">
@@ -52,7 +52,7 @@
     <input name="in" type="color3" nodename="mtlxhextiledimage1" />
   </separate3>
   <hextiledimage name="mtlxhextiledimage1" type="color3" xpos="-2.63109" ypos="-0.492504">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/scratches.tex" colorspace="raw" />
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/scratches.tex" colorspace="none" />
     <input name="tiling" type="vector2" value="3e+01, 3e+01" />
   </hextiledimage>
   <bump name="mtlxbump1" type="vector3" xpos="4.11536" ypos="1.22937">
@@ -78,15 +78,15 @@
   <flake3d name="mtlxflake3d2" type="multioutput" xpos="-2.53252" ypos="3.9248">
     <input name="coverage" type="float" value="0.8" />
     <input name="roughness" type="float" value="0.25" />
-    <input name="size" type="float" value="0.002" />
+    <input name="size" type="float" value="0.004" />
   </flake3d>
   <normalize name="mtlxnormalize1" type="vector3" xpos="-2.53252" ypos="5.9548">
     <input name="in" type="vector3" nodename="mtlxflake3d1" output="flakenormal" />
   </normalize>
   <flake3d name="mtlxflake3d1" type="multioutput" xpos="-4.87877" ypos="5.5048">
     <input name="coverage" type="float" value="0.7" />
-    <input name="roughness" type="float" value="0.2" />
-    <input name="size" type="float" value="0.002" />
+    <input name="roughness" type="float" value="0.004" />
+    <input name="size" type="float" value="0.2" />
   </flake3d>
   <oren_nayar_diffuse_bsdf name="mtlxoren_nayar_diffuse_bsdf1" type="BSDF" xpos="3.08891" ypos="7.0848">
     <input name="color" type="color3" value="0.0686, 0.1096, 0.1453" />

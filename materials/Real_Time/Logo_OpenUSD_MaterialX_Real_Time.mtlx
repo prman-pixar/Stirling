@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0"?>
-<materialx version="1.39">
+<materialx version="1.39" colorspace="lin_srgb">
   <surface name="mtlxsurface1" type="surfaceshader" xpos="13.3061" ypos="-2.36712">
     <input name="bsdf" type="BSDF" nodename="mtlxmix1" />
   </surface>
@@ -28,7 +28,7 @@
     <input name="in" type="color3" nodename="mtlxhextiledimage2" />
   </separate3>
   <hextiledimage name="mtlxhextiledimage2" type="color3" xpos="-10.9189" ypos="-8.16603">
-    <input name="file" type="filename" value="../../textures/srgb/scratches.png" colorspace="raw" />
+    <input name="file" type="filename" value="../../textures/srgb/scratches.png" colorspace="none" />
   </hextiledimage>
   <bump name="mtlxbump1" type="vector3" xpos="-5.56436" ypos="-7.08424">
     <input name="height" type="float" nodename="mtlxseparate3c2" output="outr" />
@@ -66,7 +66,7 @@
     <input name="low" type="color3" value="0.01, 0.01, 0.01" />
   </clamp>
   <hextiledimage name="mtlxhextiledimage1" type="color3" xpos="-13.7293" ypos="-1.34739">
-    <input name="file" type="filename" value="../../textures/srgb/Metal003_4K_Roughness.png" colorspace="raw" />
+    <input name="file" type="filename" value="../../textures/srgb/Metal003_4K_Roughness.png" colorspace="none" />
     <input name="tiling" type="vector2" value="2, 2" />
   </hextiledimage>
   <bump name="mtlxbump2" type="vector3" xpos="-5.79878" ypos="0.520775">

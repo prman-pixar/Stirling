@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<materialx version="1.39">
+<materialx version="1.39" colorspace="lin_srgb">
   <surface name="mtlxsurface1" type="surfaceshader" xpos="0.111249" ypos="-0.145247">
     <input name="bsdf" type="BSDF" nodename="mtlxlayer1" />
   </surface>
@@ -11,7 +11,7 @@
     <input name="roughness" type="vector2" value="0.3, 0.3" />
   </dielectric_bsdf>
   <oren_nayar_diffuse_bsdf name="mtlxoren_nayar_diffuse_bsdf1" type="BSDF" xpos="-4.88405" ypos="1.49828">
-    <input name="color" type="color3" value="0.05, 0.05, 0.05" />
+    <input name="color" type="color3" value="0.02, 0.02, 0.02" />
   </oren_nayar_diffuse_bsdf>
   <surfacematerial name="Black_Plastic_MaterialX" type="material">
     <input name="surfaceshader" type="surfaceshader" nodename="mtlxsurface1" />

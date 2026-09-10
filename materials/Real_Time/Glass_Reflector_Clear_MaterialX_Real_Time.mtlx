@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<materialx version="1.39">
+<materialx version="1.39" colorspace="lin_srgb">
   <surface name="mtlxsurface1" type="surfaceshader" xpos="0.173997" ypos="-1.00924">
     <input name="bsdf" type="BSDF" nodename="mtlxdielectric_bsdf1" />
   </surface>
@@ -16,7 +16,7 @@
     <input name="in" type="color3" nodename="mtlxhextiledimage2" />
   </separate3>
   <hextiledimage name="mtlxhextiledimage2" type="color3" xpos="-15.5836" ypos="-4.07219">
-    <input name="file" type="filename" value="../../textures/srgb/scratches.png" colorspace="raw" />
+    <input name="file" type="filename" value="../../textures/srgb/scratches.png" colorspace="none" />
     <input name="tiling" type="vector2" value="2, 2" />
   </hextiledimage>
   <normalmap name="mtlxnormalmap1" type="vector3" nodedef="ND_normalmap_float" xpos="-5.56346" ypos="-0.374747">
@@ -24,7 +24,7 @@
     <input name="normal" type="vector3" nodename="mtlxbump1" />
   </normalmap>
   <image name="mtlximage1" type="vector3" xpos="-8.00934" ypos="-0.439453">
-    <input name="file" type="filename" value="../../textures/srgb/reflector_Glass.png" colorspace="raw" />
+    <input name="file" type="filename" value="../../textures/srgb/reflector_Glass.png" colorspace="none" />
     <input name="texcoord" type="vector2" nodename="mtlxplace2d1" />
   </image>
   <place2d name="mtlxplace2d1" type="vector2" xpos="-10.3517" ypos="-0.439453">

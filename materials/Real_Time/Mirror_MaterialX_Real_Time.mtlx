@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<materialx version="1.39">
+<materialx version="1.39" colorspace="lin_srgb">
   <surface name="mtlxsurface1" type="surfaceshader" xpos="-0.231694" ypos="-0.295835">
     <input name="bsdf" type="BSDF" nodename="mtlxconductor_bsdf1" />
   </surface>

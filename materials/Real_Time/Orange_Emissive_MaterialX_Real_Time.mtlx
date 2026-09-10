@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<materialx version="1.39">
+<materialx version="1.39" colorspace="lin_srgb">
   <surface name="mtlxsurface1" type="surfaceshader" xpos="1.16241" ypos="1.57619">
     <input name="edf" type="EDF" nodename="mtlxuniform_edf1" />
   </surface>

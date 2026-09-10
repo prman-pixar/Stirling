@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<materialx version="1.39">
+<materialx version="1.39" colorspace="acescg">
   <surface name="mtlxsurface1" type="surfaceshader" xpos="-2.1157" ypos="-1.43528">
     <input name="bsdf" type="BSDF" nodename="mtlxoren_nayar_diffuse_bsdf1" />
   </surface>
