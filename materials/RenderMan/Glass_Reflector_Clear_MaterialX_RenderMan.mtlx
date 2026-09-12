@@ -16,7 +16,7 @@
     <input name="in" type="vector3" nodename="mtlxhextiledimage2" />
   </separate3>
   <hextiledimage name="mtlxhextiledimage2" type="vector3" xpos="-15.5836" ypos="-4.07219">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/scratches.tex" colorspace="none" />
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/scratches.tex" />
     <input name="tiling" type="vector2" value="2, 2" />
   </hextiledimage>
   <normalmap name="mtlxnormalmap1" type="vector3" nodedef="ND_normalmap_vector3" xpos="-5.56346" ypos="-0.374747">
@@ -24,7 +24,7 @@
     <input name="normal" type="vector3" nodename="mtlxbump1" />
   </normalmap>
   <image name="mtlximage1" type="vector3" xpos="-8.00934" ypos="-0.439453">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/reflector_Glass.tex" colorspace="none" />
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/reflector_Glass.tex" />
     <input name="texcoord" type="vector2" nodename="mtlxplace2d1" />
   </image>
   <place2d name="mtlxplace2d1" type="vector2" xpos="-10.3517" ypos="-0.439453">

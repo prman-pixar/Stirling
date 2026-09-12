@@ -20,7 +20,7 @@
     <input name="in" type="color3" nodename="mtlxhextiledimage2" />
   </separate3>
   <hextiledimage name="mtlxhextiledimage2" type="color3" xpos="-13.8302" ypos="1.34527">
-    <input name="file" type="filename" value="../../textures/srgb/scratches.png" colorspace="none" />
+    <input name="file" type="filename" value="../../textures/srgb/scratches.png" />
     <input name="tiling" type="vector2" value="1e+01, 1e+01" />
   </hextiledimage>
   <surfacematerial name="Window_MaterialX" type="material">

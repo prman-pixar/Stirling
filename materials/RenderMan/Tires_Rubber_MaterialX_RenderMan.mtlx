@@ -64,7 +64,7 @@
     <input name="in" type="color3" nodename="mtlximage3" />
   </separate3>
   <image name="mtlximage3" type="color3" xpos="-14.4926" ypos="1.99923">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/RenderMan_Tire_Inscription_Bump.tex" colorspace="none"/>
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/RenderMan_Tire_Inscription_Bump.tex" />
     <input name="filtertype" type="string" value="cubic" />
     <input name="texcoord" type="vector2" nodename="mtlxplace2d1" />
   </image>
@@ -94,7 +94,7 @@
     <input name="in" type="float" nodename="mtlximage4" />
   </range>
   <image name="mtlximage4" type="float" xpos="2.18262" ypos="-12.3083">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/Stirling_Tire_Mask.tex" colorspace="none" />
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/Stirling_Tire_Mask.tex" />
   </image>
   <displacement name="mtlxdisplacement" type="displacementshader" nodedef="ND_displacement_float" xpos="-0.120633" ypos="4.63403">
     <input name="displacement" type="float" nodename="mtlxseparate3c1" output="outr" />
@@ -103,7 +103,7 @@
     <input name="in" type="color3" nodename="mtlximage1" />
   </separate3>
   <image name="mtlximage1" type="color3" xpos="-4.60638" ypos="4.63403">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/tire_Disp.tex" colorspace="none" />
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/tire_Disp.tex" />
   </image>
   <surfacematerial name="Tires_Rubber_MaterialX" type="material">
     <input name="surfaceshader" type="surfaceshader" nodename="mtlxsurface1" />

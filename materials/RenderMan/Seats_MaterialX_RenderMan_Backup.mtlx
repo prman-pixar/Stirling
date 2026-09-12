@@ -17,14 +17,14 @@
     <input name="outlow" type="vector2" value="0.3, 0.3" />
   </range>
   <image name="mtlximage3" type="vector2" xpos="-9.0993" ypos="-2.09715">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/stirling_Seats_Roughness.tex" colorspace="none" />
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/stirling_Seats_Roughness.tex" />
   </image>
   <normalmap name="mtlxnormalmap1" type="vector3" nodedef="ND_normalmap_float" xpos="-5.15553" ypos="2.7004">
     <input name="in" type="vector3" nodename="mtlximage2" />
     <input name="scale" type="float" value="0.4" />
   </normalmap>
   <image name="mtlximage2" type="vector3" xpos="-9.0993" ypos="2.7004">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/stirling_Seats_Normal.tex" colorspace="none" />
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/stirling_Seats_Normal.tex" />
   </image>
   <oren_nayar_diffuse_bsdf name="mtlxoren_nayar_diffuse_bsdf1" type="BSDF" xpos="0.0529213" ypos="1.93435">
     <input name="color" type="color3" nodename="mtlximage1" />

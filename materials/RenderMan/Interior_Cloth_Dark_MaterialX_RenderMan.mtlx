@@ -19,14 +19,14 @@
     <input name="outlow" type="float" value="0.1" />
   </range>
   <tiledimage name="mtlxtiledimage5" type="float" xpos="-3.37383" ypos="-2.08415">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/poly_wool_herringbone_rough_1k.tex" colorspace="none" />
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/poly_wool_herringbone_rough_1k.tex"  />
     <input name="uvtiling" type="vector2" value="5, 5" />
   </tiledimage>
   <normalmap name="mtlxnormalmap1" type="vector3" nodedef="ND_normalmap_float" xpos="-2.72513" ypos="4.95675">
     <input name="in" type="vector3" nodename="mtlxtiledimage1" />
   </normalmap>
   <tiledimage name="mtlxtiledimage1" type="vector3" xpos="-5.58734" ypos="4.95675">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/poly_wool_herringbone_nor_gl_1k.tex" colorspace="none" />
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/poly_wool_herringbone_nor_gl_1k.tex" />
     <input name="uvtiling" type="vector2" value="5, 5" />
   </tiledimage>
   <oren_nayar_diffuse_bsdf name="mtlxoren_nayar_diffuse_bsdf1" type="BSDF" xpos="2.62617" ypos="2.23569">
@@ -34,12 +34,12 @@
     <input name="normal" type="vector3" nodename="mtlxnormalmap1" />
   </oren_nayar_diffuse_bsdf>
   <colorcorrect name="mtlxcolorcorrect1" type="color3" xpos="-2.72513" ypos="1.63569">
-    <input name="gain" type="float" value="0.04" />
+    <input name="gain" type="float" value="0.1" />
     <input name="in" type="color3" nodename="mtlxtiledimage2" />
     <input name="saturation" type="float" value="0" />
   </colorcorrect>
   <tiledimage name="mtlxtiledimage2" type="color3" xpos="-5.38103" ypos="1.48569">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/poly_wool_herringbone_diff_1k.tex" colorspace="acescg" />
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/poly_wool_herringbone_diff_1k.tex" colorspace="acescg"/>
     <input name="uvtiling" type="vector2" value="5, 5" />
   </tiledimage>
   <surfacematerial name="Interior_Cloth_Dark_MaterialX" type="material">

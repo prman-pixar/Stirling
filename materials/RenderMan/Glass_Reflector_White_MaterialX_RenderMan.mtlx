@@ -12,7 +12,7 @@
     <input name="in" type="vector3" nodename="mtlximage1" />
   </normalmap>
   <image name="mtlximage1" type="vector3" xpos="-8.00934" ypos="-0.439453">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/reflector_Glass.tex" colorspace="none" />
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/reflector_Glass.tex" />
     <input name="texcoord" type="vector2" nodename="mtlxplace2d1" />
   </image>
   <place2d name="mtlxplace2d1" type="vector2" xpos="-10.3517" ypos="-0.439453">

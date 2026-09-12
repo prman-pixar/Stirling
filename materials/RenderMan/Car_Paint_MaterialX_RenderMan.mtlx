@@ -52,7 +52,7 @@
     <input name="in" type="color3" nodename="mtlxhextiledimage1" />
   </separate3>
   <hextiledimage name="mtlxhextiledimage1" type="color3" xpos="-2.63109" ypos="-0.492504">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/scratches.tex" colorspace="none" />
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/scratches.tex" />
     <input name="tiling" type="vector2" value="3e+01, 3e+01" />
   </hextiledimage>
   <bump name="mtlxbump1" type="vector3" xpos="4.11536" ypos="1.22937">
