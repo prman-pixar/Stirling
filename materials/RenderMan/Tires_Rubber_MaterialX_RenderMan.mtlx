@@ -18,6 +18,7 @@
   </dielectric_bsdf>
   <bump name="mtlxbump3" type="vector3" xpos="4.8903" ypos="-3.10457">
     <input name="height" type="float" nodename="mtlxseparate3c4" output="outr" />
+    <input name="scale" type="float" value="0.05" />
   </bump>
   <separate3 name="mtlxseparate3c4" type="multioutput" nodedef="ND_separate3_color3" xpos="2.42246" ypos="-3.12431">
     <input name="in" type="color3" nodename="mtlxhextiledimage2" />
@@ -43,27 +44,25 @@
     <input name="roughness" type="vector2" value="0.2, 0.2" />
   </dielectric_bsdf>
   <multiply name="mtlxmultiply_height" type="float" xpos="-7.90509" ypos="1.99923">
-    <input name="in1" type="float" nodename="mtlxseparate3c3" output="outr" />
+    <input name="in1" type="float" nodename="mtlximage3" />
     <input name="in2" type="float" value="1" />
   </multiply> 
   <add name="mtlxadd_combined_heights" type="float" xpos="-5.90509" ypos="1.99923">
-    <input name="in1" type="float" nodename="mtlxseparate3c2" output="outr" />
+    <input name="in1" type="float" nodename="mtlxmultiply_tire_bump" />
     <input name="in2" type="float" nodename="mtlxmultiply_height" />
   </add>  
   <bump name="mtlxbump1" type="vector3" xpos="-3.3418" ypos="0.289025">
     <input name="height" type="float" nodename="mtlxadd_combined_heights" />
     <input name="scale" type="float" value="0.3" />
   </bump>
-  <separate3 name="mtlxseparate3c2" type="multioutput" nodedef="ND_separate3_color3" xpos="-8.90509" ypos="-0.690975">
-    <input name="in" type="color3" nodename="mtlximage2" />
-  </separate3>
-  <image name="mtlximage2" type="color3" xpos="-11.4286" ypos="-0.690975">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/tire_bump.tex" colorspace="none" />
+  <multiply name="mtlxmultiply_tire_bump" type="float" xpos="-9.9286" ypos="-0.690975" doc="tire_bump stores height normalised to 0..1 for 8-bit precision; this restores the original height range.">
+    <input name="in1" type="float" nodename="mtlximage2" />
+    <input name="in2" type="float" value="0.26" />
+  </multiply>
+  <image name="mtlximage2" type="float" xpos="-11.4286" ypos="-0.690975">
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/tire_bump.tex" />
   </image>
-  <separate3 name="mtlxseparate3c3" type="multioutput" nodedef="ND_separate3_color3" xpos="-11.4286" ypos="1.99923">
-    <input name="in" type="color3" nodename="mtlximage3" />
-  </separate3>
-  <image name="mtlximage3" type="color3" xpos="-14.4926" ypos="1.99923">
+  <image name="mtlximage3" type="float" xpos="-14.4926" ypos="1.99923">
     <input name="file" type="filename" value="../../textures/aces_RenderMan/RenderMan_Tire_Inscription_Bump.tex" />
     <input name="filtertype" type="string" value="cubic" />
     <input name="texcoord" type="vector2" nodename="mtlxplace2d1" />
@@ -97,12 +96,9 @@
     <input name="file" type="filename" value="../../textures/aces_RenderMan/Stirling_Tire_Mask.tex" />
   </image>
   <displacement name="mtlxdisplacement" type="displacementshader" nodedef="ND_displacement_float" xpos="-0.120633" ypos="4.63403">
-    <input name="displacement" type="float" nodename="mtlxseparate3c1" output="outr" />
+    <input name="displacement" type="float" nodename="mtlximage1" />
   </displacement>
-  <separate3 name="mtlxseparate3c1" type="multioutput" nodedef="ND_separate3_color3" xpos="-2.54873" ypos="4.63403">
-    <input name="in" type="color3" nodename="mtlximage1" />
-  </separate3>
-  <image name="mtlximage1" type="color3" xpos="-4.60638" ypos="4.63403">
+  <image name="mtlximage1" type="float" xpos="-4.60638" ypos="4.63403">
     <input name="file" type="filename" value="../../textures/aces_RenderMan/tire_Disp.tex" />
   </image>
   <surfacematerial name="Tires_Rubber_MaterialX" type="material">

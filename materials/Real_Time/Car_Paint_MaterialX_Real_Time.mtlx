@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<materialx version="1.39" colorspace="lin_srgb">
+<materialx version="1.39" colorspace="lin_rec709">
   <surface name="mtlxsurface1" type="surfaceshader" xpos="32.6061" ypos="0.0342705">
     <input name="bsdf" type="BSDF" nodename="mtlxmix3" />
   </surface>
@@ -18,6 +18,7 @@
   </dielectric_bsdf>
   <bump name="mtlxbump2" type="vector3" xpos="15.5286" ypos="-6.16313">
     <input name="height" type="float" nodename="mtlxseparate3c2" output="outr" />
+    <input name="scale" type="float" value="0.05" />
   </bump>
   <separate3 name="mtlxseparate3c2" type="multioutput" nodedef="ND_separate3_color3" xpos="12.9927" ypos="-6.91015">
     <input name="in" type="color3" nodename="mtlxhextiledimage2" />
@@ -52,7 +53,7 @@
     <input name="in" type="color3" nodename="mtlxhextiledimage1" />
   </separate3>
   <hextiledimage name="mtlxhextiledimage1" type="color3" xpos="-2.63109" ypos="-0.492504">
-    <input name="file" type="filename" value="../../textures/srgb/scratches.png" />
+    <input name="file" type="filename" value="../../textures/srgb/scratches.png" colorspace="srgb_texture" />
     <input name="tiling" type="vector2" value="3e+01, 3e+01" />
   </hextiledimage>
   <bump name="mtlxbump1" type="vector3" xpos="4.11536" ypos="1.22937">
@@ -85,8 +86,8 @@
   </normalize>
   <flake3d name="mtlxflake3d1" type="multioutput" xpos="-4.87877" ypos="5.5048">
     <input name="coverage" type="float" value="0.7" />
-    <input name="roughness" type="float" value="0.004" />
-    <input name="size" type="float" value="0.2" />
+    <input name="roughness" type="float" value="0.2" />
+    <input name="size" type="float" value="0.004" />
   </flake3d>
   <oren_nayar_diffuse_bsdf name="mtlxoren_nayar_diffuse_bsdf1" type="BSDF" xpos="3.08891" ypos="7.0848">
     <input name="color" type="color3" value="0.0686, 0.1096, 0.1453" />
