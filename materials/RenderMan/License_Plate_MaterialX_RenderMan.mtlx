@@ -22,7 +22,7 @@
     <input name="in" type="color3" nodename="mtlxhextiledimage1" />
   </separate3>
   <hextiledimage name="mtlxhextiledimage1" type="color3" xpos="-19.8424" ypos="-5.92077">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/scratches.tex" />
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/scratches.tex" colorspace="none" />
     <input name="tiling" type="vector2" value="3, 3" />
   </hextiledimage>
   <bump name="mtlxbump2" type="vector3" xpos="-13.4383" ypos="-4.83898">
@@ -52,7 +52,7 @@
     <input name="color" type="color3" value="0.05, 0.05, 0.05" />
   </oren_nayar_diffuse_bsdf>
   <image name="mtlximage2" type="float" xpos="-8.26269" ypos="-0.591919">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/License_Plate_A113.tex" colorspace="acescg" />
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/License_Plate_A113.tex" />
   </image>
   <surfacematerial name="License_Plate_MaterialX" type="material">
     <input name="surfaceshader" type="surfaceshader" nodename="mtlxsurface1" />
