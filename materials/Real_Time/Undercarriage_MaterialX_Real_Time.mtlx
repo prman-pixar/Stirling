@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<materialx version="1.39" colorspace="lin_srgb">
+<materialx version="1.39" colorspace="lin_rec709">
   <surface name="mtlxsurface1" type="surfaceshader" xpos="6.71743" ypos="-0.2626">
     <input name="bsdf" type="BSDF" nodename="mtlxmix1" />
   </surface>
@@ -18,6 +18,7 @@
   </dielectric_bsdf>
   <bump name="mtlxbump2" type="vector3" xpos="-7.70442" ypos="-10.7972">
     <input name="height" type="float" nodename="mtlxseparate3c3" output="outr" />
+    <input name="scale" type="float" value="0.05" />
   </bump>
   <separate3 name="mtlxseparate3c3" type="multioutput" nodedef="ND_separate3_color3" xpos="-10.2403" ypos="-11.5442">
     <input name="in" type="color3" nodename="mtlxhextiledimage3" />

@@ -21,9 +21,16 @@ Real Time:
 - 2K max resolution
 - Games | Web | Mobile
 
-RenderMan:
+Offline:
 - SubD - Low res mesh
 - TEX Mipmap textures
+- OCIO Aces color space
+- 4K max resolution
+- Production rendering
+
+RenderMan:
+- SubD - Low res mesh
+- TEX Mipmap textures in RenderMan format
 - OCIO Aces color space
 - 4K max resolution
 - Production rendering

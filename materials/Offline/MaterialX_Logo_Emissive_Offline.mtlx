@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<materialx version="1.39" colorspace="acescg">
+  <surface name="mtlxsurface1" type="surfaceshader" xpos="4.67306" ypos="-3.14002">
+    <input name="edf" type="EDF" nodename="mtlxuniform_edf1" />
+  </surface>
+  <uniform_edf name="mtlxuniform_edf1" type="EDF" xpos="0.0656693" ypos="-2.69002">
+    <input name="color" type="color3" nodename="mtlximage4" />
+  </uniform_edf>
+  <image name="mtlximage4" type="color3" xpos="-9.91664" ypos="-2.99661">
+    <input name="file" type="filename" value="../../textures/aces_Mipmapped/materialx-logo-black.tex" colorspace="acescg" />
+  </image>
+  <surfacematerial name="MaterialX_Logo_Emissive" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxsurface1" />
+  </surfacematerial>
+</materialx>

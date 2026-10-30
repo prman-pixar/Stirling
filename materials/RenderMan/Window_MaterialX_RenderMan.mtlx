@@ -1,11 +1,8 @@
 <?xml version="1.0"?>
 <materialx version="1.39" colorspace="acescg">
   <surface name="mtlxsurface1" type="surfaceshader" xpos="-0.785575" ypos="-0.0376">
-    <input name="bsdf" type="BSDF" nodename="mtlxmix1" />
+    <input name="bsdf" type="BSDF" nodename="mtlxdielectric_bsdf1" />
   </surface>
-  <mix name="mtlxmix1" type="BSDF" xpos="-3.13672" ypos="0.1124">
-    <input name="bg" type="BSDF" nodename="mtlxdielectric_bsdf1" />
-  </mix>
   <dielectric_bsdf name="mtlxdielectric_bsdf1" type="BSDF" xpos="-5.75827" ypos="0.295266">
     <input name="normal" type="vector3" nodename="mtlxbump1" />
     <input name="roughness" type="vector2" value="0, 0" />
@@ -20,7 +17,7 @@
     <input name="in" type="color3" nodename="mtlxhextiledimage2" />
   </separate3>
   <hextiledimage name="mtlxhextiledimage2" type="color3" xpos="-13.8302" ypos="1.34527">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/scratches.tex" />
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/scratches.tex" colorspace="none" />
     <input name="tiling" type="vector2" value="1e+01, 1e+01" />
   </hextiledimage>
   <surfacematerial name="Window_MaterialX" type="material">

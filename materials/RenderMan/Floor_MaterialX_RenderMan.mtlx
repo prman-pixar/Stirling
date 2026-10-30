@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<materialx version="1.39" colorspace="acescg">
+
+  <!-- Node Definitions and Texture Graph Blocks -->
+  <texcoord name="mtlxtexcoord1" type="vector2" />
+
+  <tiledimage name="mtlxtiledimage1" type="float">
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/oak_wood_planks_rough_4k.tex" />
+    <input name="uvtiling" type="vector2" value="4, 4" />
+    <input name="texcoord" type="vector2" nodename="mtlxtexcoord1" />
+  </tiledimage>
+
+  <range name="mtlxrange1" type="float">
+    <input name="in" type="float" nodename="mtlxtiledimage1" />
+  </range>
+
+  <roughness_anisotropy name="mtlxroughness_anisotropy1" type="vector2">
+    <input name="roughness" type="float" nodename="mtlxrange1" />
+    <input name="anisotropy" type="float" nodename="mtlxrange1" />
+  </roughness_anisotropy>
+
+  <bump name="mtlxbump1" type="vector3">
+    <input name="height" type="float" nodename="mtlxtiledimage1" />
+    <input name="scale" type="float" value="0.1" />
+  </bump>
+
+  <tiledimage name="mtlxtiledimage2" type="color3">
+    <!-- Read as un-converted sRGB raw textures, handled explicitly by the renderer -->
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/oak_wood_planks_diff_4k.tex" colorspace="acescg" />
+    <input name="uvtiling" type="vector2" value="4, 4" />
+    <input name="texcoord" type="vector2" nodename="mtlxtexcoord1" />
+  </tiledimage>
+
+  <tiledimage name="mtlxtiledimage3" type="float">
+    <input name="file" type="filename" value="../../textures/aces_RenderMan/oak_wood_planks_disp_4k.tex" />
+    <input name="uvtiling" type="vector2" value="4, 4" />
+    <input name="texcoord" type="vector2" nodename="mtlxtexcoord1" />
+  </tiledimage>
+
+  <!-- BSDF and Layer Construction Nodes -->
+  <oren_nayar_diffuse_bsdf name="mtlxoren_nayar_diffuse_bsdf1" type="BSDF">
+    <input name="color" type="color3" nodename="mtlxtiledimage2" />
+  </oren_nayar_diffuse_bsdf>
+
+  <dielectric_bsdf name="mtlxdielectric_bsdf1" type="BSDF">
+    <input name="normal" type="vector3" nodename="mtlxbump1" />
+    <input name="roughness" type="vector2" nodename="mtlxroughness_anisotropy1" />
+  </dielectric_bsdf>
+
+  <layer name="mtlxlayer1" type="BSDF">
+    <input name="base" type="BSDF" nodename="mtlxoren_nayar_diffuse_bsdf1" />
+    <input name="top" type="BSDF" nodename="mtlxdielectric_bsdf1" />
+  </layer>
+
+  <surface name="mtlxsurface1" type="surfaceshader">
+    <input name="bsdf" type="BSDF" nodename="mtlxlayer1" />
+  </surface>
+
+  <displacement name="mtlxdisplacement" type="displacementshader">
+    <input name="displacement" type="float" nodename="mtlxtiledimage3" />
+    <input name="scale" type="float" value="0.01" />
+  </displacement>
+
+  <!-- Final Material Compound Output Target -->
+  <surfacematerial name="Floor_MaterialX" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxsurface1" />
+    <input name="displacementshader" type="displacementshader" nodename="mtlxdisplacement" />
+  </surfacematerial>
+
+</materialx>
