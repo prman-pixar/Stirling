@@ -39,7 +39,6 @@ Stirling running in Houdini 22 and RenderMan 28:
 
 <img width="2555" height="1536" alt="Houdini-22-RenderMan-XPU" src="renders/RenderMan/Solaris_RenderMan_XPU.png" />
 
-<br><br>
 ## Trivia
 Stirling also has some fun RenderMan historical trivia:
 
