@@ -1,5 +1,5 @@
 # Stirling
-Stirling is an official Pixar asset derived from the Finn McMissile character in Pixar's *Cars 2* and designed to showcase MaterialX. The asset was authored using MaterialX 1.39 base building blocks and does not use monolithic materials such as Standard Surface and OpenPBR.
+Stirling is an official Pixar asset derived from the Finn McMissile character in Pixar's *Cars 2* and designed to showcase MaterialX. The asset was authored using MaterialX 1.39 base building blocks and does not use monolithic materials such as Standard Surface and OpenPBR.  
 
 <div align="center">
 	<img src="renders/RenderMan/WideCam.png" width="100%" />
@@ -11,7 +11,7 @@ Stirling is an official Pixar asset derived from the Finn McMissile character in
 </div>
 
 <br><br>
-Stirling comes in two openUSD variants:
+Stirling comes in three openUSD variants:
 
 Real Time: 
 - Polys - High res mesh
@@ -44,8 +44,12 @@ Stirling also has some fun RenderMan historical trivia:
 
 * A113 \- Tag (Number of the classroom at CalArts where many legendary Disney, Pixar, and indie animators studied)  
 * Utah Teapot \- Rearview mirror prop (famous open source testing model from University of Utah)  
-* Cornell Box \- Rearview mirror prop (inspired by the famous test scene, redone in a more basic geometry for this asset)  
+* Cornell Box \- Rearview mirror prop (inspired by the famous test scene and redone with primitive geometry)  
 * MaterialX logo  
 * OpenUSD Logo  
-* 001988 \- Milage on dashboard \- RenderMan RiSpec publishing year  
-* RenderMan Tires \- Assorted RenderMan trivia in the rubber inscription
+* 001988 \- Dashboard Mileage \- RenderMan RiSpec publishing year  
+* RenderMan Tires \- Assorted RenderMan trivia on the tire sidewall  
+
+##**About the Authors**
+Stirling is an initiative by Pixar's Dylan Sisson and modeled by Andrew Schmidt. MaterialX Stirling was created by Pixar's Leif Pedersen and in collaboration with Pixar's Fran Gonzalez and Jonathan Stone from Lucasfilm.  
+A special thanks to the technical direction and contributions of Arnon Marcus from OTOY.
