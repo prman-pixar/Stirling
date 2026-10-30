@@ -40,7 +40,7 @@ Stirling running in Houdini 22 and RenderMan 28:
 <img width="2555" height="1536" alt="Houdini-22-RenderMan-XPU" src="renders/RenderMan/Solaris_RenderMan_XPU.png" />
 
 <br><br>
-##Trivia 
+## Trivia
 Stirling also has some fun RenderMan historical trivia:
 
 * A113 \- Tag (Number of the classroom at CalArts where many legendary Disney, Pixar, and indie animators studied)  
@@ -51,6 +51,6 @@ Stirling also has some fun RenderMan historical trivia:
 * 001988 \- Dashboard Mileage \- RenderMan RiSpec publishing year  
 * RenderMan Tires \- Assorted RenderMan trivia on the tire sidewall  
 
-##About the Authors  
+## About the Authors
 Stirling is an initiative by Pixar's Dylan Sisson and modeled by Andrew Schmidt. MaterialX Stirling was created by Pixar's Leif Pedersen and in collaboration with Pixar's Fran Gonzalez and Jonathan Stone from Lucasfilm.  
 A special thanks to the technical direction and contributions of Arnon Marcus from OTOY.
