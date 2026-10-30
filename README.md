@@ -2,13 +2,12 @@
 Stirling is an official Pixar asset derived from the Finn McMissile character in Pixar's *Cars 2* and designed to showcase MaterialX. The asset was authored using MaterialX 1.39 base building blocks and does not use monolithic materials such as Standard Surface and OpenPBR.
 
 <div align="center">
-    <img src="https://github.com/leif3d/Stirling/blob/main/renders/RenderMan/WideCam.png" width="100%" />
-  <img src="https://github.com/leif3d/Stirling/blob/main/renders/RenderMan/HeadLightCam.png" width="24%" />
-    <img src="https://github.com/leif3d/Stirling/blob/main/renders/RenderMan/TailLightCam.png" width="24%" />
-  <img src="https://github.com/leif3d/Stirling/blob/main/renders/RenderMan/InteriorCam.png" width="24%" />
-    <img src="https://github.com/leif3d/Stirling/blob/main/renders/RenderMan/TireCam.png" width="24%" />
-
-
+	<img src="https://github.com/prman-pixar/Stirling/tree/main/renders/RenderMan/WideCam.png" width="100%" />
+	<img src="https://github.com/prman-pixar/Stirling/tree/main/renders/RenderMan/HeadLightCam.png" width="19%" />
+	<img src="https://github.com/prman-pixar/Stirling/tree/main/renders/RenderMan/TailLightCam.png" width="19%" />
+	<img src="https://github.com/prman-pixar/Stirling/tree/main/renders/RenderMan/InteriorCam.png" width="19%" />
+	<img src="https://github.com/prman-pixar/Stirling/tree/main/renders/RenderMan/TireCam_Front.png" width="19%" />
+	<img src="https://github.com/prman-pixar/Stirling/tree/main/renders/RenderMan/TireCam_Back.png" width="19%" />
 </div>
 
 <br><br>
@@ -38,7 +37,7 @@ RenderMan:
 <br><br>
 Stirling running in Houdini 22 and RenderMan 28:
 
-<img width="2556" height="1378" alt="Houdini-22-RenderMan-XPU" src="https://github.com/user-attachments/assets/8ae3e9aa-a518-46ee-90f4-1b342c28d532" />
+<img width="2555" height="1536" alt="Houdini-22-RenderMan-XPU" src="https://github.com/prman-pixar/Stirling/tree/main/renders/RenderMan/Solaris_RenderMan_XPU.png" />
 
 <br><br>
 Stirling also has some fun RenderMan historical trivia:
