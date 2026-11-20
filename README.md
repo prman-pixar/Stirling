@@ -27,6 +27,13 @@ Offline:
 - 4K max resolution
 - Production rendering
 
+RenderMan:
+- SubD - Low res mesh
+- TEX Mipmap textures (RenderMan format)
+- Linear Rec.709 color space
+- 4K max resolution
+- Production rendering
+
 <br><br>
 Stirling running in Houdini 22 and RenderMan 28:
 
