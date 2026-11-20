@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<materialx version="1.39" colorspace="acescg">
+<materialx version="1.39">
   <surface name="mtlxsurface1" type="surfaceshader" xpos="15.0751" ypos="0.295455">
     <input name="bsdf" type="BSDF" nodename="mtlxlayer1" />
   </surface>
@@ -22,7 +22,7 @@
     <input name="in" type="color3" nodename="mtlxhextiledimage1" />
   </separate3>
   <hextiledimage name="mtlxhextiledimage1" type="color3" xpos="-19.8424" ypos="-5.92077">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/scratches.tex" colorspace="none" />
+    <input name="file" type="filename" value="../../textures/tex_renderman/scratches.tex" colorspace="none" />
     <input name="tiling" type="vector2" value="3, 3" />
   </hextiledimage>
   <bump name="mtlxbump2" type="vector3" xpos="-13.4383" ypos="-4.83898">
@@ -35,7 +35,7 @@
     <input name="mix" type="float" nodename="mtlximage2" />
   </mix>
   <conductor_bsdf name="mtlxconductor_bsdf1" type="BSDF" xpos="-5.24985" ypos="2.13142">
-    <input name="extinction" type="color3" value="5.206, 4.231, 3.754" />
+    <input name="extinction" type="color3" value="5.576, 4.213, 3.653" />
     <input name="ior" type="color3" value="0.155, 0.116, 0.138" />
     <input name="normal" type="vector3" nodename="mtlxbump1" />
     <input name="roughness" type="vector2" value="0.2, 0.2" />
@@ -46,13 +46,13 @@
     <input name="scale" type="float" value="0.3" />
   </bump>
   <image name="mtlximage1" type="float" xpos="-12.7353" ypos="2.64059">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/License_Plate_A113_Bump.tex" />
+    <input name="file" type="filename" value="../../textures/tex_renderman/License_Plate_A113_Bump.tex" />
   </image>
   <oren_nayar_diffuse_bsdf name="mtlxoren_nayar_diffuse_bsdf1" type="BSDF" xpos="-8.26269" ypos="-2.68446">
-    <input name="color" type="color3" value="0.05, 0.05, 0.05" />
+    <input name="color" type="color3" value="0.05, 0.05, 0.05" colorspace="lin_rec709" />
   </oren_nayar_diffuse_bsdf>
   <image name="mtlximage2" type="float" xpos="-8.26269" ypos="-0.591919">
-    <input name="file" type="filename" value="../../textures/aces_RenderMan/License_Plate_A113.tex" />
+    <input name="file" type="filename" value="../../textures/tex_renderman/License_Plate_A113.tex" />
   </image>
   <surfacematerial name="License_Plate_MaterialX" type="material">
     <input name="surfaceshader" type="surfaceshader" nodename="mtlxsurface1" />

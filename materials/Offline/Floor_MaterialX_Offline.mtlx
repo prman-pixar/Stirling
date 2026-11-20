@@ -1,22 +1,18 @@
 <?xml version="1.0"?>
-<materialx version="1.39" colorspace="acescg">
+<materialx version="1.39">
 
   <!-- Node Definitions and Texture Graph Blocks -->
   <texcoord name="mtlxtexcoord1" type="vector2" />
 
   <tiledimage name="mtlxtiledimage1" type="float">
-    <input name="file" type="filename" value="../../textures/aces_Mipmapped/oak_wood_planks_rough_4k.tex" />
+    <input name="file" type="filename" value="../../textures/tex/oak_wood_planks_rough_4k.tex" />
     <input name="uvtiling" type="vector2" value="4, 4" />
     <input name="texcoord" type="vector2" nodename="mtlxtexcoord1" />
   </tiledimage>
 
-  <range name="mtlxrange1" type="float">
-    <input name="in" type="float" nodename="mtlxtiledimage1" />
-  </range>
-
   <roughness_anisotropy name="mtlxroughness_anisotropy1" type="vector2">
-    <input name="roughness" type="float" nodename="mtlxrange1" />
-    <input name="anisotropy" type="float" nodename="mtlxrange1" />
+    <input name="roughness" type="float" nodename="mtlxtiledimage1" />
+    <input name="anisotropy" type="float" nodename="mtlxtiledimage1" />
   </roughness_anisotropy>
 
   <bump name="mtlxbump1" type="vector3">
@@ -25,14 +21,13 @@
   </bump>
 
   <tiledimage name="mtlxtiledimage2" type="color3">
-    <!-- Read as un-converted sRGB raw textures, handled explicitly by the renderer -->
-    <input name="file" type="filename" value="../../textures/aces_Mipmapped/oak_wood_planks_diff_4k.tex" colorspace="acescg" />
+    <input name="file" type="filename" value="../../textures/tex/oak_wood_planks_diff_4k.tex" colorspace="lin_rec709" />
     <input name="uvtiling" type="vector2" value="4, 4" />
     <input name="texcoord" type="vector2" nodename="mtlxtexcoord1" />
   </tiledimage>
 
   <tiledimage name="mtlxtiledimage3" type="float">
-    <input name="file" type="filename" value="../../textures/aces_Mipmapped/oak_wood_planks_disp_4k.tex" />
+    <input name="file" type="filename" value="../../textures/tex/oak_wood_planks_disp_4k.tex" />
     <input name="uvtiling" type="vector2" value="4, 4" />
     <input name="texcoord" type="vector2" nodename="mtlxtexcoord1" />
   </tiledimage>
@@ -56,7 +51,7 @@
     <input name="bsdf" type="BSDF" nodename="mtlxlayer1" />
   </surface>
 
-  <displacement name="mtlxdisplacement" type="displacementshader">
+  <displacement name="mtlxdisplacement" type="displacementshader" nodedef="ND_displacement_float">
     <input name="displacement" type="float" nodename="mtlxtiledimage3" />
     <input name="scale" type="float" value="0.01" />
   </displacement>

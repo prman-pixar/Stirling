@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<materialx version="1.39" colorspace="lin_rec709">
+<materialx version="1.39">
   <surface name="mtlxsurface1" type="surfaceshader" xpos="8.83288" ypos="0.906063">
     <input name="bsdf" type="BSDF" nodename="mtlxlayer1" />
   </surface>
@@ -8,7 +8,7 @@
     <input name="top" type="BSDF" nodename="mtlxsheen_bsdf1" />
   </layer>
   <sheen_bsdf name="mtlxsheen_bsdf1" type="BSDF" xpos="2.62617" ypos="-0.0927874">
-    <input name="color" type="color3" value="0.3, 0.3, 0.3" />
+    <input name="color" type="color3" value="0.3, 0.3, 0.3" colorspace="lin_rec709" />
     <input name="mode" type="string" value="zeltner" />
     <input name="normal" type="vector3" nodename="mtlxnormalmap1" />
     <input name="roughness" type="float" nodename="mtlxrange1" />

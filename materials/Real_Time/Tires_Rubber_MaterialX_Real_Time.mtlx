@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<materialx version="1.39" colorspace="lin_rec709">
+<materialx version="1.39">
   <surface name="mtlxsurface1" type="surfaceshader" xpos="23.2408" ypos="-0.232691">
     <input name="bsdf" type="BSDF" nodename="mtlxmix1" />
   </surface>
@@ -43,14 +43,10 @@
     <input name="normal" type="vector3" nodename="mtlxbump1" />
     <input name="roughness" type="vector2" value="0.2, 0.2" />
   </dielectric_bsdf>
-  <multiply name="mtlxmultiply_height" type="float" xpos="-7.90509" ypos="1.99923">
-    <input name="in1" type="float" nodename="mtlximage3" />
-    <input name="in2" type="float" value="1" />
-  </multiply> 
   <add name="mtlxadd_combined_heights" type="float" xpos="-5.90509" ypos="1.99923">
     <input name="in1" type="float" nodename="mtlxmultiply_tire_bump" />
-    <input name="in2" type="float" nodename="mtlxmultiply_height" />
-  </add>  
+    <input name="in2" type="float" nodename="mtlximage3" />
+  </add>
   <bump name="mtlxbump1" type="vector3" xpos="-3.3418" ypos="0.289025">
     <input name="height" type="float" nodename="mtlxadd_combined_heights" />
     <input name="scale" type="float" value="0.3" />
@@ -73,7 +69,7 @@
   </place2d>
   <texcoord name="mtlxtexcoord1" type="vector2" xpos="-20.4573" ypos="2.46407" />
   <oren_nayar_diffuse_bsdf name="mtlxoren_nayar_diffuse_bsdf1" type="BSDF" xpos="-1.76488" ypos="1.19731">
-    <input name="color" type="color3" value="0.02, 0.02, 0.02" />
+    <input name="color" type="color3" value="0.02, 0.02, 0.02" colorspace="lin_rec709" />
     <input name="normal" type="vector3" nodename="mtlxbump1" />
     <input name="roughness" type="float" value="0.2" />
   </oren_nayar_diffuse_bsdf>
@@ -96,11 +92,15 @@
     <input name="file" type="filename" value="../../textures/srgb/Stirling_Tire_Mask.png" />
   </image>
   <displacement name="mtlxdisplacement" type="displacementshader" nodedef="ND_displacement_float" xpos="-0.120633" ypos="4.63403">
-    <input name="displacement" type="float" nodename="mtlximage1" />
+    <input name="displacement" type="float" nodename="mtlxremap_tire_disp" />
   </displacement>
+  <remap name="mtlxremap_tire_disp" type="float" xpos="-2.36351" ypos="4.63403" doc="tire_Disp stores displacement normalised to 0..1 for 8-bit precision; this restores the original displacement range.">
+    <input name="in" type="float" nodename="mtlximage1" />
+    <input name="outlow" type="float" value="-0.007" />
+    <input name="outhigh" type="float" value="0.031" />
+  </remap>
   <image name="mtlximage1" type="float" xpos="-4.60638" ypos="4.63403">
     <input name="file" type="filename" value="../../textures/srgb/tire_Disp.png" />
-    <input name="filtertype" type="string" value="cubic" />
   </image>
   <surfacematerial name="Tires_Rubber_MaterialX" type="material">
     <input name="surfaceshader" type="surfaceshader" nodename="mtlxsurface1" />

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<materialx version="1.39" colorspace="acescg">
+<materialx version="1.39">
   <surface name="mtlxsurface1" type="surfaceshader" xpos="2.81559" ypos="-1.18981">
     <input name="bsdf" type="BSDF" nodename="mtlxlayer1" />
   </surface>
@@ -11,8 +11,13 @@
     <input name="roughness" type="vector2" value="0.05, 0.05" />
   </dielectric_bsdf>
   <oren_nayar_diffuse_bsdf name="mtlxoren_nayar_diffuse_bsdf1" type="BSDF" xpos="-2.20806" ypos="0.0523117">
-    <input name="color" type="color3" nodename="mtlxcolorcorrect1" />
+    <input name="color" type="color3" nodename="mtlxclamp1" />
   </oren_nayar_diffuse_bsdf>
+  <clamp name="mtlxclamp1" type="color3" nodedef="ND_clamp_color3FA" xpos="-3.39021" ypos="0.0523117">
+    <input name="in" type="color3" nodename="mtlxcolorcorrect1" />
+    <input name="low" type="float" value="0" />
+    <input name="high" type="float" value="1" />
+  </clamp>
   <colorcorrect name="mtlxcolorcorrect1" type="color3" xpos="-4.57235" ypos="0.0523117">
     <input name="gain" type="float" value="3" />
     <input name="gamma" type="float" value="1.4" />
@@ -20,7 +25,7 @@
     <input name="saturation" type="float" value="1.2" />
   </colorcorrect>
   <image name="mtlximage1" type="color3" xpos="-7.14371" ypos="0.0523117">
-    <input name="file" type="filename" value="../../textures/aces_Mipmapped/Wood_014_COLOR.tex" colorspace="acescg" />
+    <input name="file" type="filename" value="../../textures/tex/Wood_014_COLOR.tex" colorspace="lin_rec709" />
   </image>
   <surfacematerial name="Lacquered_Wood_MaterialX" type="material">
     <input name="surfaceshader" type="surfaceshader" nodename="mtlxsurface1" />

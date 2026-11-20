@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<materialx version="1.39" colorspace="lin_rec709">
+<materialx version="1.39">
   <surface name="mtlxsurface1" type="surfaceshader" xpos="4.23978" ypos="0.420629">
     <input name="bsdf" type="BSDF" nodename="mtlxlayer1" />
   </surface>
@@ -12,11 +12,14 @@
     <input name="roughness" type="vector2" nodename="mtlxrange1" />
   </dielectric_bsdf>
   <range name="mtlxrange1" type="vector2" nodedef="ND_range_vector2" xpos="-4.94612" ypos="-1.87215">
-    <input name="in" type="vector2" nodename="mtlximage3" />
+    <input name="in" type="vector2" nodename="mtlxconvert1" />
     <input name="outhigh" type="vector2" value="0.8, 0.8" />
     <input name="outlow" type="vector2" value="0.3, 0.3" />
   </range>
-  <image name="mtlximage3" type="vector2" xpos="-9.0993" ypos="-2.09715">
+  <convert name="mtlxconvert1" type="vector2" nodedef="ND_convert_float_vector2" xpos="-7.02271" ypos="-2.09715">
+    <input name="in" type="float" nodename="mtlximage3" />
+  </convert>
+  <image name="mtlximage3" type="float" xpos="-9.0993" ypos="-2.09715">
     <input name="file" type="filename" value="../../textures/srgb/stirling_Seats_Roughness.png" />
   </image>
   <normalmap name="mtlxnormalmap1" type="vector3" nodedef="ND_normalmap_float" xpos="-5.15553" ypos="2.7004">

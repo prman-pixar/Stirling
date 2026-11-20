@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<materialx version="1.39" colorspace="lin_rec709">
+<materialx version="1.39">
   <surface name="mtlxsurface1" type="surfaceshader" xpos="3.39805" ypos="0.22329">
     <input name="bsdf" type="BSDF" nodename="mtlxconductor_bsdf1" />
     <input name="thin_walled" type="boolean" value="true" />
   </surface>
   <conductor_bsdf name="mtlxconductor_bsdf1" type="BSDF" xpos="0.132234" ypos="0.22329">
-    <input name="extinction" type="color3" value="4, 3.5, 3" />
+    <input name="extinction" type="color3" value="4.444, 3.449, 2.927" />
     <input name="ior" type="color3" value="4, 3.5, 3" />
     <input name="normal" type="vector3" nodename="mtlxbump1" />
     <input name="roughness" type="vector2" nodename="mtlxremap1" />
