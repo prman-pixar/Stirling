@@ -96,14 +96,14 @@
   </contrast>
   <remap name="mtlxremap1" type="float" xpos="-13.5246" ypos="-9.66785">
     <input name="in" type="float" nodename="mtlxextract1" />
-    <input name="inhigh" type="float" value="8e+01" />
+    <input name="inhigh" type="float" value="8" />
   </remap>
   <extract name="mtlxextract1" type="float" nodedef="ND_extract_vector3" xpos="-16.2313" ypos="-9.66785">
     <input name="in" type="vector3" nodename="mtlxposition1" />
     <input name="index" type="integer" value="1" />
   </extract>
   <position name="mtlxposition1" type="vector3" xpos="-18.9103" ypos="-9.66785">
-    <input name="space" type="string" value="world" />
+    <input name="space" type="string" value="object" />
   </position>
   <contrast name="mtlxcontrast2" type="float" xpos="-7.11469" ypos="-7.0858">
     <input name="amount" type="float" value="0.8" />
@@ -115,10 +115,9 @@
     <input name="position" type="vector3" nodename="mtlxmultiply1" />
   </fractal3d>
   <multiply name="mtlxmultiply1" type="vector3" nodedef="ND_multiply_vector3" xpos="-13.3893" ypos="-6.9008">
-    <input name="in1" type="vector3" nodename="mtlxposition2" />
+    <input name="in1" type="vector3" nodename="mtlxposition1" />
     <input name="in2" type="vector3" value="2, 2, 2" />
   </multiply>
-  <position name="mtlxposition2" type="vector3" xpos="-17.0248" ypos="-7.0508" />
   <surfacematerial name="Chrome_MaterialX" type="material">
     <input name="surfaceshader" type="surfaceshader" nodename="mtlxsurface1" />
   </surfacematerial>
